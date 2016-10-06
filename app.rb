@@ -1,4 +1,5 @@
 require 'sinatra/base'
+require 'appsignal/integrations/sinatra'
 
 module API
   class Root < Sinatra::Base
