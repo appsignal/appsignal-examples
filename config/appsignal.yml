@@ -1,0 +1,9 @@
+default: &defaults
+  push_api_key: "<%= ENV['APPSIGNAL_PUSH_API_KEY'] %>"
+  name: "Capistrano + Figaro test"
+
+  debug: true
+
+production:
+  <<: *defaults
+  active: true
