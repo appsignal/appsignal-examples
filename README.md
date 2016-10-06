@@ -37,3 +37,21 @@ possible to focus on the AppSignal integration. Use the code in the example to
 modify your own application.
 
 [appsignal-website]: https://appsignal.com/
+
+## Contributing
+
+If you want to contribute an application to our examples repository, thank
+you!, and please follow these steps:
+
+1. Fork this repository.
+2. Create a new branch with the application name.  
+   `git checkout --orphan branch-name`  
+   Use `+` to combine gems and `-` to indicate variations on other examples.
+3. Add an example application.
+4. Document the example application's along with its usage in the README.
+5. Commit it with `Add [test app name] example`.
+6. Install AppSignal in the application.
+7. Commit it with `Install AppSignal`.
+8. Send in an issue.  
+   Since PRs can only be merged in another branch, please send in issues
+   pointing to your fork and we will include them manually.
