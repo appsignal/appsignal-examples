@@ -1,8 +1,12 @@
 require "grape"
 require_relative "./ping"
+require "appsignal"
+require "appsignal/integrations/grape"
 
 module Acme
   class Api < ::Grape::API
+    use Appsignal::Grape::Middleware
+
     format :json
 
     namespace :users do

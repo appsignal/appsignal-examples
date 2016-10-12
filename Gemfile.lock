@@ -1,3 +1,12 @@
+GIT
+  remote: git@github.com:appsignal/appsignal-ruby.git
+  revision: fe4b52ee19dd30e430e70dd394ff8407708bc1ec
+  ref: grape-namespaces
+  specs:
+    appsignal (1.4.0.beta.1)
+      rack
+      thread_safe
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -54,6 +63,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  appsignal!
   grape
 
 BUNDLED WITH
