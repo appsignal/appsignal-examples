@@ -10,6 +10,7 @@ Each example lives in its own branch.
 - Ruby: plain old Ruby app: [ruby](../../tree/ruby)
 - Sinatra: [sinatra](../../tree/sinatra)
 - Sinatra modular apps: [sinatra-modular](../../tree/sinatra-modular)
+- Grape: [grape](../../tree/grape)
 - Capistrano + dotenv: [capistrano+dotenv](../../tree/capistrano+dotenv)
 - Capistrano + Figaro: [capistrano+figaro](../../tree/capistrano+figaro)
 
