@@ -8,6 +8,7 @@ that work with [AppSignal][appsignal-website].
 Each example lives in its own branch.
 
 - Ruby: plain old Ruby app: [ruby](../../tree/ruby)
+- Rails 5 + Sequel: [rails-5+sequel](../../tree/rails-5+sequel)
 - Sinatra: [sinatra](../../tree/sinatra)
 - Sinatra modular apps: [sinatra-modular](../../tree/sinatra-modular)
 - Grape: [grape](../../tree/grape)
