@@ -1,0 +1,14 @@
+default: &defaults
+  push_api_key: "<%= ENV["APPSIGNAL_PUSH_API_KEY"] %>"
+  name: "Rails 5 + Sequel manual instrumentation app"
+  debug: true
+  instrument_sequel: false # <- Is set to false!
+                           # See initializers/sequel.rb for manual instrumentation
+
+development:
+  <<: *defaults
+  active: true
+
+production:
+  <<: *defaults
+  active: true
