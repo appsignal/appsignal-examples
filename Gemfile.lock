@@ -1,0 +1,17 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    appsignal (2.0.4)
+      rack
+      thread_safe
+    rack (2.0.1)
+    thread_safe (0.3.5)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  appsignal
+
+BUNDLED WITH
+   1.13.7
