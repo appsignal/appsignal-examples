@@ -8,6 +8,7 @@ that work with [AppSignal][appsignal-website].
 Each example lives in its own branch.
 
 - Ruby: plain old Ruby app: [ruby](../../tree/ruby)
+- Ruby: custom background job: [custom-background-job](../../tree/custom-background-job)
 - Rails 5 + Sequel: [rails-5+sequel](../../tree/rails-5+sequel)
 - Rails 5 + Sequel - manual instrumentation: [rails-5+sequel-manual-instrumentation](../../tree/rails-5+sequel-manual-instrumentation)  
   For when extensions override the AppSignal Sequel instrumentation.
