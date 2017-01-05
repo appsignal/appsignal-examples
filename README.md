@@ -1,6 +1,6 @@
 # AppSignal + Capistrano + dotenv
 
-> This an example application. Please read this repositories [main
+> This an example application. Please read this repository's [main
   README](../../blob/master/README.md) and then visit back here.
 
 This example app demonstrates how to integrate the [appsignal][appsignal-gem]
