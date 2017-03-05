@@ -9,6 +9,10 @@ module Acme
 
     format :json
 
+    route [:get, :post], "hello" do
+      "HEllo!"
+    end
+
     namespace :users do
       get do
         [{ name: "Tom" }]
