@@ -15,6 +15,7 @@ Each example lives in its own branch.
   For when extensions override the AppSignal Sequel instrumentation.
 - Sinatra: [sinatra](../../tree/sinatra)
 - Sinatra modular apps: [sinatra-modular](../../tree/sinatra-modular)
+- Padrino: [padrino](../../tree/padrino)
 - Grape: [grape](../../tree/grape)
 - Capistrano + dotenv: [capistrano+dotenv](../../tree/capistrano+dotenv)
 - Capistrano + Figaro: [capistrano+figaro](../../tree/capistrano+figaro)
