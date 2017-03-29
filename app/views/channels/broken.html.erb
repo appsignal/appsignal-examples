@@ -1,0 +1,10 @@
+<h1>Broken channel</h1>
+
+<div class="messages js-messages">
+  <%= render @messages %>
+</div>
+
+<h2>New message</h2>
+<%= form_for Message.new do |f| %>
+  <%= f.text_field :content, :data => { :behavior => :broken_channel_speaker } %>
+<% end %>
