@@ -10,25 +10,23 @@ Appsignal.start_logger
 class Job
   def perform
     # Create a transaction
-    Appsignal::Transaction.create(
+    transaction = Appsignal::Transaction.create(
       SecureRandom.uuid,
       Appsignal::Transaction::BACKGROUND_JOB,
       Appsignal::Transaction::GenericRequest.new(ENV.to_hash)
     )
 
     # Add instrumentation
-    Appsignal.instrument(
-      "perform_job.some_name_for_this",
-      :class => "Job",
-      :method => "perform"
-    ) do
+    Appsignal.instrument("perform_job.some_name_for_this") do
       begin
         # Do stuff
-        Foo.bar
+        raise "foo"
       rescue => exception
         # Catch exceptions
         Appsignal.set_error(exception)
+        raise exception
       ensure
+        transaction.set_action("#{self.class.name}##{__method__}")
         # Complete transaction
         Appsignal::Transaction.complete_current!
 
