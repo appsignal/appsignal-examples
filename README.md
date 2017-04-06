@@ -4,7 +4,7 @@
   README](../../blob/master/README.md) and then visit back here.
 
 This example app demonstrates how to integrate the [appsignal][appsignal-gem]
-gem with [Grape][sinatra].
+gem with [Grape][grape].
 
 See the `app.rb` file for how to integrate AppSignal in Grape.
 
@@ -28,4 +28,4 @@ Visit these URLs:
 - http://localhost:9292/users/1/error
 
 [appsignal-gem]: https://github.com/appsignal/appsignal-ruby
-[sinatra]: http://www.ruby-grape.org/
+[grape]: http://www.ruby-grape.org/
