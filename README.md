@@ -19,6 +19,7 @@ Each example lives in its own branch.
 - Grape: [grape](../../tree/grape)
 - Capistrano + dotenv: [capistrano+dotenv](../../tree/capistrano+dotenv)
 - Capistrano + Figaro: [capistrano+figaro](../../tree/capistrano+figaro)
+- Shoryuken: [shoryuken](../../tree/shoryuken)
 
 ## Setup
 
