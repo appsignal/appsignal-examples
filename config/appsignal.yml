@@ -1,0 +1,13 @@
+default: &defaults
+  push_api_key: "<%= ENV["APPSIGNAL_PUSH_API_KEY"] %>"
+  name: "Shoryuken test"
+
+  debug: true
+
+development:
+  <<: *defaults
+  active: true
+
+production:
+  <<: *defaults
+  active: true

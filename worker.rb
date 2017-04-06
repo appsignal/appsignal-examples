@@ -1,5 +1,13 @@
 require "shoryuken"
 require "json"
+require "appsignal"
+
+Appsignal.config = Appsignal::Config.new(
+  File.expand_path(File.dirname(__FILE__)),
+  "production"
+)
+Appsignal.start
+Appsignal.start_logger
 
 class MyWorker
   include Shoryuken::Worker
