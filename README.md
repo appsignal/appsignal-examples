@@ -29,4 +29,4 @@ Visit these URLs:
 - http://localhost:9292/foo/:id/boo/error
 
 [appsignal-gem]: https://github.com/appsignal/appsignal-ruby
-[sinatra]: http://padrinorb.com/
+[padrino]: http://padrinorb.com/
