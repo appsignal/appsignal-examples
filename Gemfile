@@ -11,6 +11,7 @@ gem "uglifier", ">= 1.3.0"
 
 gem "delayed_job_active_record"
 gem "daemons"
+gem "appsignal"
 
 group :development do
   gem "listen", ">= 3.0.5", "< 3.2"
