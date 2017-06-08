@@ -10,4 +10,6 @@ gem "coffee-rails", "~> 4.2"
 gem "jquery-rails"
 gem "listen"
 
+# gem "appsignal"
+gem "appsignal", git: "git@github.com:appsignal/appsignal-ruby.git", ref: "action_cable-support-reworked"
 gem "pry"

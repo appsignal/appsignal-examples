@@ -1,3 +1,11 @@
+GIT
+  remote: git@github.com:appsignal/appsignal-ruby.git
+  revision: b461be36f4db03060b82c9cf27cdc5c69c109889
+  ref: action_cable-support-reworked
+  specs:
+    appsignal (2.2.1)
+      rack
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -141,6 +149,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  appsignal!
   coffee-rails (~> 4.2)
   jquery-rails
   listen
