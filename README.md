@@ -18,7 +18,9 @@ For more information about AppSignal support for Delayed Job, please see our
 $ bin/rake db:migrate # Run migrations
 $ bin/rake jobs:work # Start delayed job
 $ bin/rails c # Start a Rails console
+
 > WelcomeMailJob.new.deliver # Queue a new job
+> ErrorJob.new.break_things # Queue a new job with an error
 ```
 
 [appsignal-gem]: https://github.com/appsignal/appsignal-ruby
