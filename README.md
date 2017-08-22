@@ -15,8 +15,9 @@ For more information about AppSignal support for Delayed Job, please see our
 ## Usage
 
 ```
-$ bundle exce rake jobs:work # Start delayed job
-$ bundle exce rails c # Start a Rails console
+$ bin/rake db:migrate # Run migrations
+$ bin/rake jobs:work # Start delayed job
+$ bin/rails c # Start a Rails console
 > WelcomeMailJob.new.deliver # Queue a new job
 ```
 
