@@ -19,8 +19,15 @@ $ bin/rake db:migrate # Run migrations
 $ bin/rake jobs:work # Start delayed job
 $ bin/rails c # Start a Rails console
 
-> WelcomeMailJob.new.deliver # Queue a new job
-> ErrorJob.new.break_things # Queue a new job with an error
+# Queue a normal Delayed Job job
+> WelcomeMailJob.new.deliver("optional argument", :foo => "bar")
+# Queue a normal Delayed Job job with an error
+> ErrorJob.new.break_things("optional argument", :foo => "bar")
+
+# Queue a new ActiveJob job
+> ActiveJobWelcomeMailJob.perform_later("optional argument", :foo => "bar")
+# Queue a new ActiveJob job with an error
+> ActiveJobErrorJob.perform_later("optional argument", :foo => "bar")
 ```
 
 [appsignal-gem]: https://github.com/appsignal/appsignal-ruby
