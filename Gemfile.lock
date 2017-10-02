@@ -1,6 +1,8 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    appsignal (2.3.3)
+      rack
     concurrent-ruby (1.0.5)
     connection_pool (2.2.1)
     rack (2.0.1)
@@ -17,6 +19,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  appsignal
   sidekiq
 
 BUNDLED WITH

@@ -6,7 +6,8 @@
 This example app demonstrates how to integrate the [appsignal][appsignal-gem]
 gem with standalone [Sidekiq].
 
-See the `worker.rb` file for how to integrate AppSignal from scratch.
+AppSignal automatically integrates with Sidekiq, so there shouldn't really be
+any manual integration necessary.
 
 ## Usage
 
