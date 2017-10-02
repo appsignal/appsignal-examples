@@ -14,6 +14,7 @@ Each example lives in its own branch.
 - Rails 5 + Sequel: [rails-5+sequel](../../tree/rails-5+sequel)
 - Rails 5 + Sequel - manual instrumentation: [rails-5+sequel-manual-instrumentation](../../tree/rails-5+sequel-manual-instrumentation)  
   For when extensions override the AppSignal Sequel instrumentation.
+- Sidekiq: [sidekiq](../../tree/sidekiq)
 - Sinatra: [sinatra](../../tree/sinatra)
 - Sinatra modular apps: [sinatra-modular](../../tree/sinatra-modular)
 - Padrino: [padrino](../../tree/padrino)
