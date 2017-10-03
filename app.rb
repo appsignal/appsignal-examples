@@ -17,3 +17,6 @@ SlowWorker.perform_async({
     :hat => false
   }
 }, "foobar")
+
+DelayedExtensionWorker.delay.slow(:bar => "baz")
+DelayedExtensionWorker.delay.error(:bar => "baz")

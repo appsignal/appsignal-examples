@@ -20,3 +20,13 @@ class ErrorWorker
     raise "Example error!"
   end
 end
+
+class DelayedExtensionWorker
+  def self.slow(params)
+    sleep 1
+  end
+
+  def self.error(params)
+    raise "DelayedExtensionWorkerError!"
+  end
+end
