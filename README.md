@@ -11,6 +11,7 @@ Each example lives in its own branch.
 - Ruby: custom background job: [custom-background-job](../../tree/custom-background-job)
 - Ruby + Rake: [ruby-rake](../../tree/ruby-rake)
 - Rails 5 + Delayed Job: [rails-5+delayed_job](../../tree/rails-5+delayed_job)
+- Rails 5 + Resque - [rails-5+resque](../../tree/rails-5+resque)
 - Rails 5 + Sequel: [rails-5+sequel](../../tree/rails-5+sequel)
 - Rails 5 + Sequel - manual instrumentation: [rails-5+sequel-manual-instrumentation](../../tree/rails-5+sequel-manual-instrumentation)  
   For when extensions override the AppSignal Sequel instrumentation.
