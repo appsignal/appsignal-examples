@@ -20,3 +20,6 @@ SlowWorker.perform_async({
 
 DelayedExtensionWorker.delay.slow(:bar => "baz")
 DelayedExtensionWorker.delay.error(:bar => "baz")
+
+ActiveJobErrorWorker.perform_later "foo", { :foo => "bar" }
+ActiveJobSlowWorker.perform_later "foo", { :foo => "bar" }
