@@ -11,43 +11,22 @@ GEM
       tzinfo (~> 1.1)
     appsignal (2.3.0.beta.3)
       rack
-    celluloid (0.17.3)
-      celluloid-essentials
-      celluloid-extras
-      celluloid-fsm
-      celluloid-pool
-      celluloid-supervision
-      timers (>= 4.1.1)
-    celluloid-essentials (0.20.5)
-      timers (>= 4.1.1)
-    celluloid-extras (0.20.5)
-      timers (>= 4.1.1)
-    celluloid-fsm (0.20.5)
-      timers (>= 4.1.1)
-    celluloid-pool (0.20.5)
-      timers (>= 4.1.1)
-    celluloid-supervision (0.20.6)
-      timers (>= 4.1.1)
+    concurrent-ruby (1.0.5)
     connection_pool (2.2.1)
     globalid (0.4.0)
       activesupport (>= 4.2.0)
-    hitimes (1.2.6)
     i18n (0.8.6)
-    json (1.8.6)
     minitest (5.10.3)
     rack (2.0.3)
-    redis (3.3.5)
-    redis-namespace (1.5.3)
-      redis (~> 3.0, >= 3.0.4)
-    sidekiq (3.5.4)
-      celluloid (~> 0.17.2)
+    rack-protection (2.0.0)
+      rack
+    redis (4.0.1)
+    sidekiq (5.0.5)
+      concurrent-ruby (~> 1.0)
       connection_pool (~> 2.2, >= 2.2.0)
-      json (~> 1.0)
-      redis (~> 3.2, >= 3.2.1)
-      redis-namespace (~> 1.5, >= 1.5.2)
+      rack-protection (>= 1.5.0)
+      redis (>= 3.3.4, < 5)
     thread_safe (0.3.6)
-    timers (4.1.2)
-      hitimes
     tzinfo (1.2.3)
       thread_safe (~> 0.1)
 

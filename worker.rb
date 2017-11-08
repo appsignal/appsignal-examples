@@ -2,6 +2,11 @@ require "sidekiq"
 require "active_job"
 require "appsignal"
 
+# Sidekiq v5 requirement for the delay extension
+if Sidekiq::Extensions.respond_to? :enable_delay!
+  Sidekiq::Extensions.enable_delay!
+end
+
 ActiveJob::Base.queue_adapter = :sidekiq
 
 Appsignal.config = Appsignal::Config.new(Dir.pwd, "production")
