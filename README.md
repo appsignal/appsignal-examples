@@ -72,7 +72,7 @@ APPSIGNAL_PUSH_API_KEY=YOUR-KEY bundle exec some command
 
 ## Usage
 
-1. Checkout the branch you need as listed in [Examples](#examples).
+1. Checkout the branch you need as listed in [Examples](#ruby-example-apps).
 2. Read the README for that example application.
 
 ### Minimal setup per app
