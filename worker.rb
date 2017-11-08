@@ -26,7 +26,7 @@ end
 
 class DelayedExtensionWorker
   def self.slow(params)
-    sleep 1
+    sleep 10
   end
 
   def self.error(params)
