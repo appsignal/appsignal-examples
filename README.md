@@ -31,6 +31,7 @@ Each example lives in its own branch.
 - Ruby + Rake: [ruby-rake](../../tree/ruby-rake)
 - Rails 5 + Delayed Job: [rails-5+delayed_job](../../tree/rails-5+delayed_job)
 - Rails 5 + Resque - [rails-5+resque](../../tree/rails-5+resque)
+- Rails 5 + Sidekiq: [rails-5+sidekiq](../../tree/rails-5+sidekiq)
 - Rails 5 + Sequel: [rails-5+sequel](../../tree/rails-5+sequel)
 - Rails 5 + Sequel - with manual instrumentation:
   [rails-5+sequel-manual-instrumentation](../../tree/rails-5+sequel-manual-instrumentation)  
