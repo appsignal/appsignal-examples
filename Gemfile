@@ -11,6 +11,7 @@ gem "uglifier", ">= 1.3.0"
 
 gem "sidekiq"
 gem "daemons"
+gem "appsignal"
 
 group :development do
   gem "listen", ">= 3.0.5", "< 3.2"
