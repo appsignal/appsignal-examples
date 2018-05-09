@@ -17,12 +17,23 @@ class Monitor
       sleep 2
     end
   end
+
+  def crash
+    Appsignal.instrument("perform.crash") do
+      puts "Crashing..."
+      sleep 1
+      raise "crash!"
+    end
+  end
 end
 
 10.times do
   begin
     Appsignal.monitor_transaction("perform_job.monitor", :class => "Monitor", :method => "loop") do
-      Monitor.new.perform
+      [
+        Thread.new { Monitor.new.perform },
+        Thread.new { Monitor.new.crash }
+      ].each(&:join)
     end
   rescue
     # Ignore exceptions
