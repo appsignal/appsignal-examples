@@ -24,6 +24,11 @@ $ bin/rails c # Start a Rails console
 # Queue a normal Delayed Job job with an error
 > ErrorJob.new.break_things("optional argument", :foo => "bar")
 
+# Queue a Proc Delayed Job job
+> WelcomeMailStructJob.new.deliver("optional argument", :foo => "bar")
+# Queue a Proc Delayed Job job with an error
+> ErrorStructJob.new.break_things("optional argument", :foo => "bar")
+
 # Queue a new ActiveJob job
 > ActiveJobWelcomeMailJob.perform_later("optional argument", :foo => "bar")
 # Queue a new ActiveJob job with an error
