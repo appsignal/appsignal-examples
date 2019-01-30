@@ -11,7 +11,7 @@ gem "uglifier", ">= 1.3.0"
 
 gem "delayed_job_active_record"
 gem "daemons"
-gem "appsignal", git: "git@github.com:appsignal/appsignal-ruby.git", ref: "delayed_job_active_job"
+gem "appsignal"
 
 group :development do
   gem "listen", ">= 3.0.5", "< 3.2"
