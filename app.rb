@@ -1,5 +1,17 @@
 require 'sinatra/base'
-require 'appsignal/integrations/sinatra'
+require "appsignal"
+require "appsignal/rack/sinatra_instrumentation"
+
+Appsignal.logger.info("Loading Sinatra (#{Sinatra::VERSION}) integration")
+
+app_settings = ::Sinatra::Application.settings
+Appsignal.config = Appsignal::Config.new(
+  app_settings.root || Dir.pwd,
+  app_settings.environment
+)
+
+Appsignal.start_logger
+Appsignal.start
 
 module API
   class V1 < Sinatra::Base
@@ -32,6 +44,8 @@ end
 
 module API
   class Root < Sinatra::Base
+    use Appsignal::Rack::SinatraBaseInstrumentation
+
     get '/' do
       'Hello world!'
     end
