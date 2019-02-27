@@ -1,8 +1,11 @@
 require 'sinatra/base'
 require 'appsignal/integrations/sinatra'
 
+class Base < Sinatra::Base
+end
+
 module API
-  class Root < Sinatra::Base
+  class Root < Base
     get '/' do
       'Hello world!'
     end
@@ -10,7 +13,7 @@ module API
 end
 
 module API
-  class V1 < Sinatra::Base
+  class V1 < Base
     get '/' do
       'Hello version 1!'
     end
@@ -18,7 +21,7 @@ module API
 end
 
 module API
-  class V2 < Sinatra::Base
+  class V2 < Base
     get '/' do
       'Hello version 2!'
     end
