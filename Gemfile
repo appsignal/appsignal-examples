@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 
-gem "rails", "~> 5.0.0", ">= 5.0.0.1"
-gem "sequel"
+gem "rails", "5.2.3"
+gem "sequel", "5.23.0"
 gem "sqlite3"
 gem "appsignal"
 
