@@ -2,8 +2,6 @@
 
 require('dotenv').config()
 
-const { appsignal } = require("../appsignal")
-
 /**
  * Module dependencies.
  */

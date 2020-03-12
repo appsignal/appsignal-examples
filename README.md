@@ -16,6 +16,7 @@ If you need more help, please contact us at [support@appsignal.com][contact].
 - List of example apps
   - [Ruby example apps](#ruby-example-apps)
   - [Elixir example apps](#elixir-example-apps)
+  - [Node.js example apps](#nodejs-example-apps)
 - Usage documentation
   - [Setup](#setup)
   - [Usage](#usage)
@@ -59,6 +60,14 @@ example apps:
 
 Each repository may have multiple branches with different scenarios and
 configuration.
+
+## Node.js example apps
+
+Each example lives in its own branch.
+
+- Express.js v4: [express](../../tree/express)
+
+The examples can always be started using the `npm start`/`yarn start` commands. Create a copy of the `.env.example` file in the same directory, rename it to  `.env`, and add your own configuration variables to it.
 
 ## Setup
 
