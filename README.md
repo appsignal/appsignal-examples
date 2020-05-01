@@ -64,7 +64,7 @@ configuration.
 
 Each example lives in its own branch.
 
-- Express: [express](../../tree/express)
+- Express.js v4: [express](../../tree/express)
 
 ## Setup
 
