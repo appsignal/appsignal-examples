@@ -34,7 +34,7 @@ Each example lives in its own branch.
 - Rails 5 + Sidekiq: [rails-5+sidekiq](../../tree/rails-5+sidekiq)
 - Rails 5 + Sequel: [rails-5+sequel](../../tree/rails-5+sequel)
 - Rails 5 + Sequel - with manual instrumentation:
-  [rails-5+sequel-manual-instrumentation](../../tree/rails-5+sequel-manual-instrumentation)  
+  [rails-5+sequel-manual-instrumentation](../../tree/rails-5+sequel-manual-instrumentation)
   For when extensions override the AppSignal Sequel instrumentation.
 - Rails 5 + Que: [rails-5+que](../../tree/rails-5+que)
 - Sidekiq: [sidekiq](../../tree/sidekiq)
@@ -59,6 +59,12 @@ example apps:
 
 Each repository may have multiple branches with different scenarios and
 configuration.
+
+## Node.js example apps
+
+Each example lives in its own branch.
+
+- Express: [express](../../tree/express)
 
 ## Setup
 
@@ -89,15 +95,15 @@ If you want to contribute an application to our examples repository (thank
 you!), please follow these steps:
 
 1. Fork this repository.
-2. Create a new branch with the application name.  
-   `git checkout --orphan branch-name`  
+2. Create a new branch with the application name.
+   `git checkout --orphan branch-name`
    Use `+` to combine gems and `-` to indicate variations on other examples.
 3. Add an example application.
 4. Document the example application's along with its usage in the README.
 5. Commit it with `Add [test app name] example`.
 6. Install AppSignal in the application.
 7. Commit it with `Install AppSignal`.
-8. Send in an issue.  
+8. Send in an issue.
    Since PRs can only be merged in another branch, please send in issues
    pointing to your fork and we will include them manually.
 
