@@ -18,6 +18,11 @@ QUEUE=* bundle exec rake environment resque:work
 bundle exec rails console
 Resque.enqueue(ErrorWorker, { foo: "bar" })
 Resque.enqueue(SlowWorker, { foo: "bar" })
+
+# Queue a new ActiveJob job
+> ActiveJobWelcomeMailJob.perform_later("optional argument", :foo => "bar")
+# Queue a new ActiveJob job with an error
+> ActiveJobErrorJob.perform_later("optional argument", :foo => "bar")
 ```
 
 [appsignal-gem]: https://github.com/appsignal/appsignal-ruby
