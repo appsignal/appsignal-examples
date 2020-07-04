@@ -14,7 +14,7 @@ integration needed.
 ```
 $ export APPSIGNAL_PUSH_API_KEY="<API KEY>"
 
-$ bin/rake db:migrate # Run migrations
+$ bin/rake db:create db:migrate # Run migrations
 $ bundle exec que ./config/environment.rb # Start Que
 $ bin/rails c # Start a Rails console
 
@@ -22,6 +22,11 @@ $ bin/rails c # Start a Rails console
 > SlowJob.enqueue(foo: "bar")
 # Queue a normal Que job with an error
 > ErrorJob.enqueue(foo: "bar")
+
+# Queue a new ActiveJob job
+> ActiveJobWelcomeMailJob.perform_later("optional argument", :foo => "bar")
+# Queue a new ActiveJob job with an error
+> ActiveJobErrorJob.perform_later("optional argument", :foo => "bar")
 ```
 
 [appsignal-gem]: https://github.com/appsignal/appsignal-ruby
