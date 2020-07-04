@@ -17,7 +17,7 @@ For more information about AppSignal support for Sidekiq, please see our
 ```
 $ bundle install # Install gems
 $ bin/rake db:migrate # Run migrations
-$ bundle exec sidekiq # Start Sidekiq
+$ bundle exec sidekiq --queue default --queue mailers # Start Sidekiq
 $ bin/rails c # Start a Rails console
 
 # Queue a normal Sidekiq
@@ -36,6 +36,10 @@ $ bin/rails c # Start a Rails console
 # Wait for the job to complete and reload the user
 > user.reload
 # User should now have an email address
+
+# Queue Action Mailer job
+WelcomeMailer.with(:foo => "bar").welcome.deliver_later
+WelcomeMailer.welcome.deliver_later
 ```
 
 [appsignal-gem]: https://github.com/appsignal/appsignal-ruby
