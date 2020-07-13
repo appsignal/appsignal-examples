@@ -15,7 +15,7 @@ For more information about AppSignal support for Delayed Job, please see our
 ## Usage
 
 ```
-$ bin/rake db:migrate # Run migrations
+$ bin/rake db:create db:migrate # Run migrations
 $ bin/rake jobs:work # Start delayed job
 $ bin/rails c # Start a Rails console
 
@@ -28,6 +28,16 @@ $ bin/rails c # Start a Rails console
 > WelcomeMailStructJob.new.deliver("optional argument", :foo => "bar")
 # Queue a Proc Delayed Job job with an error
 > ErrorStructJob.new.break_things("optional argument", :foo => "bar")
+
+# Queue a class method call
+> Post.delay.archive_all("optional argument", "foo" => "bar")
+# Queue an instance method call
+> Post.create(:title => "My title").delay.send_welcome_mail("optional argument", "foo" => "bar")
+
+# Queue a job using `enqueue`
+> Delayed::Job.enqueue(EnqueueWelcomeMailStructJob.new("id"))
+# Queue a job using `enqueue` with an error
+> Delayed::Job.enqueue(EnqueueErrorStructJob.new("id"))
 
 # Queue a new ActiveJob job
 > ActiveJobWelcomeMailJob.perform_later("optional argument", :foo => "bar")
