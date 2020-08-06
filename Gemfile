@@ -9,7 +9,7 @@ gem "rails", "~> 5.0.0"
 gem "sqlite3"
 gem "uglifier", ">= 1.3.0"
 
-gem "fast_jsonapi"
+gem 'jsonapi-serializer'
 gem "daemons"
 gem "appsignal"
 

@@ -1,4 +1,4 @@
 class MovieSerializer
-  include FastJsonapi::ObjectSerializer
+  include JSONAPI::Serializer
   attributes :name, :year
 end

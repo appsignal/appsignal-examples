@@ -1,1 +1,1 @@
-require 'fast_jsonapi/instrumentation'
+require 'fast_jsonapi/instrumentation/serializable_hash'

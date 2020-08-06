@@ -5,6 +5,6 @@ class MoviesController < ApplicationController
     movie.name = 'test movie'
     movie.year = 2002
 
-    render :json => MovieSerializer.new(movie).serialized_json
+    render json: MovieSerializer.new(movie).serializable_hash.to_json
   end
 end
