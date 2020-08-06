@@ -1,6 +1,6 @@
 default: &defaults
   push_api_key: "<%= ENV['APPSIGNAL_PUSH_API_KEY'] %>"
-  name: "Sidekiq Example"
+  name: "FastJson Example"
   debug: true
 
 development:
