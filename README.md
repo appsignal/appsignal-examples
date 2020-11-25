@@ -1,115 +1,51 @@
-# AppSignal examples
+# A statically generated blog example using Next.js and Markdown
 
-This repository contains a collection of example applications and integrations
-that work with [AppSignal][appsignal]. This list of applications is not
-the complete list of frameworks and libraries integrates with, please see our
-[documentation website][docs] for the complete list.
+This example showcases Next.js's [Static Generation](https://nextjs.org/docs/basic-features/pages) feature using Markdown files as the data source.
 
-If you need more help, please contact us at [support@appsignal.com][contact].
+The blog posts are stored in `/_posts` as Markdown files with front matter support. Adding a new Markdown file in there will create a new blog post.
 
-- [AppSignal.com website][appsignal]
-- [Documentation][docs]
-- [Support][contact]
+To create the blog posts we use [`remark`](https://github.com/remarkjs/remark) and [`remark-html`](https://github.com/remarkjs/remark-html) to convert the Markdown files into an HTML string, and then send it down as a prop to the page. The metadata of every post is handled by [`gray-matter`](https://github.com/jonschlinkert/gray-matter) and also sent in props to the page.
 
-## Table of Contents
+## Demo
 
-- List of example apps
-  - [Ruby example apps](#ruby-example-apps)
-  - [Elixir example apps](#elixir-example-apps)
-- Usage documentation
-  - [Setup](#setup)
-  - [Usage](#usage)
-    - [Minimal setup per app](#minimal-setup-per-app)
-  - [Contributing](#contributing)
+[https://next-blog-starter.now.sh/](https://next-blog-starter.now.sh/)
 
-## Ruby example apps
+## Deploy your own
 
-Each example lives in its own branch.
+Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
 
-- Ruby: plain old Ruby app: [ruby](../../tree/ruby)
-- Ruby: custom background job: [custom-background-job](../../tree/custom-background-job)
-- Ruby + Rake: [ruby-rake](../../tree/ruby-rake)
-- Rails 5 + Delayed Job: [rails-5+delayed_job](../../tree/rails-5+delayed_job)
-- Rails 5 + Resque - [rails-5+resque](../../tree/rails-5+resque)
-- Rails 5 + Sidekiq: [rails-5+sidekiq](../../tree/rails-5+sidekiq)
-- Rails 5 + Sequel: [rails-5+sequel](../../tree/rails-5+sequel)
-- Rails 5 + Sequel - with manual instrumentation:
-  [rails-5+sequel-manual-instrumentation](../../tree/rails-5+sequel-manual-instrumentation)
-  For when extensions override the AppSignal Sequel instrumentation.
-- Rails 5 + Que: [rails-5+que](../../tree/rails-5+que)
-- Sidekiq: [sidekiq](../../tree/sidekiq)
-- Sinatra: [sinatra](../../tree/sinatra)
-- Sinatra modular apps: [sinatra-modular](../../tree/sinatra-modular)
-- Padrino: [padrino](../../tree/padrino)
-- Grape: [grape](../../tree/grape)
-- Capistrano + dotenv: [capistrano+dotenv](../../tree/capistrano+dotenv)
-- Capistrano + Figaro: [capistrano+figaro](../../tree/capistrano+figaro)
-- Shoryuken: [shoryuken](../../tree/shoryuken)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/git?c=1&s=https://github.com/vercel/next.js/tree/canary/examples/blog-starter)
 
-## Elixir example apps
+### Related examples
 
-Currently the Elixir apps are not added to this repository, we have plans to do
-so at a later time. For now you can refer to these repositories for Elixir
-example apps:
+- [WordPress](/examples/cms-wordpress)
+- [DatoCMS](/examples/cms-datocms)
+- [Sanity](/examples/cms-sanity)
+- [TakeShape](/examples/cms-takeshape)
+- [Prismic](/examples/cms-prismic)
+- [Contentful](/examples/cms-contentful)
+- [Strapi](/examples/cms-strapi)
+- [Agility CMS](/examples/cms-agilitycms)
+- [Cosmic](/examples/cms-cosmic)
+- [ButterCMS](/examples/cms-buttercms)
+- [Storyblok](/examples/cms-storyblok)
+- [GraphCMS](/examples/cms-graphcms)
+- [Kontent](/examples/cms-kontent)
 
-- [AppSignal Elixir example](https://github.com/jeffkreeftmeijer/appsignal-elixir-example)
-- [AppSignal Plug example](https://github.com/jeffkreeftmeijer/appsignal-plug-example)
-- [AppSignal Phoenix example](https://github.com/jeffkreeftmeijer/appsignal-phoenix-example)
-- [AppSignal Phoenix chat example](https://github.com/jeffkreeftmeijer/appsignal-phoenix-chat-example)
+## How to use
 
-Each repository may have multiple branches with different scenarios and
-configuration.
-
-## Node.js example apps
-
-Each example lives in its own branch.
-
-- Express.js v4: [express](../../tree/express)
-
-## Setup
-
-1. Create an application on [AppSignal.com][appsignal-website].
-2. Follow the installation procedure and get a "push API key".
-3. Set the push API key in your terminal session, or prefix per example app.
+Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
 
 ```bash
-export APPSIGNAL_PUSH_API_KEY=YOUR-KEY
+npx create-next-app --example blog-starter blog-starter-app
 # or
-APPSIGNAL_PUSH_API_KEY=YOUR-KEY bundle exec some command
+yarn create next-app --example blog-starter blog-starter-app
 ```
 
-## Usage
+Your blog should be up and running on [http://localhost:3000](http://localhost:3000)! If it doesn't work, post on [GitHub discussions](https://github.com/vercel/next.js/discussions).
 
-1. Checkout the branch you need as listed in [Examples](#ruby-example-apps).
-2. Read the README for that example application.
+Deploy it to the cloud with [Vercel](https://vercel.com/import?filter=next.js&utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
 
-### Minimal setup per app
+# Notes
 
-These example applications contain the least required amount of code as
-possible to focus on the AppSignal integration. Use the code in the example to
-modify your own application.
-
-## Contributing
-
-If you want to contribute an application to our examples repository (thank
-you!), please follow these steps:
-
-1. Fork this repository.
-2. Create a new branch with the application name.
-   `git checkout --orphan branch-name`
-   Use `+` to combine gems and `-` to indicate variations on other examples.
-3. Add an example application.
-4. Document the example application's along with its usage in the README.
-5. Commit it with `Add [test app name] example`.
-6. Install AppSignal in the application.
-7. Commit it with `Install AppSignal`.
-8. Send in an issue.
-   Since PRs can only be merged in another branch, please send in issues
-   pointing to your fork and we will include them manually.
-
-Also see our [Contributing guide][contributing-guide] for more information.
-
-[appsignal]: https://appsignal.com
-[contact]: mailto:support@appsignal.com
-[docs]: https://docs.appsignal.com
-[contributing-guide]: https://docs.appsignal.com/contributing
+This blog-starter uses [Tailwind CSS](https://tailwindcss.com). To control the generated stylesheet's filesize, this example uses Tailwind CSS' v1.4 [`purge` option](https://tailwindcss.com/docs/controlling-file-size/#removing-unused-css) to remove unused CSS.
