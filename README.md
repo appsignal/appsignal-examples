@@ -1,115 +1,90 @@
-# AppSignal examples
+# 📦 webpack Boilerplate
 
-This repository contains a collection of example applications and integrations
-that work with [AppSignal][appsignal]. This list of applications is not
-the complete list of frameworks and libraries integrates with, please see our
-[documentation website][docs] for the complete list.
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-If you need more help, please contact us at [support@appsignal.com][contact].
+Sensible webpack 5 boilerplate using Babel, PostCSS and Sass with a hot dev server and an optimized production build.
 
-- [AppSignal.com website][appsignal]
-- [Documentation][docs]
-- [Support][contact]
+## Installation
 
-## Table of Contents
-
-- List of example apps
-  - [Ruby example apps](#ruby-example-apps)
-  - [Elixir example apps](#elixir-example-apps)
-- Usage documentation
-  - [Setup](#setup)
-  - [Usage](#usage)
-    - [Minimal setup per app](#minimal-setup-per-app)
-  - [Contributing](#contributing)
-
-## Ruby example apps
-
-Each example lives in its own branch.
-
-- Ruby: plain old Ruby app: [ruby](../../tree/ruby)
-- Ruby: custom background job: [custom-background-job](../../tree/custom-background-job)
-- Ruby + Rake: [ruby-rake](../../tree/ruby-rake)
-- Rails 5 + Delayed Job: [rails-5+delayed_job](../../tree/rails-5+delayed_job)
-- Rails 5 + Resque - [rails-5+resque](../../tree/rails-5+resque)
-- Rails 5 + Sidekiq: [rails-5+sidekiq](../../tree/rails-5+sidekiq)
-- Rails 5 + Sequel: [rails-5+sequel](../../tree/rails-5+sequel)
-- Rails 5 + Sequel - with manual instrumentation:
-  [rails-5+sequel-manual-instrumentation](../../tree/rails-5+sequel-manual-instrumentation)
-  For when extensions override the AppSignal Sequel instrumentation.
-- Rails 5 + Que: [rails-5+que](../../tree/rails-5+que)
-- Sidekiq: [sidekiq](../../tree/sidekiq)
-- Sinatra: [sinatra](../../tree/sinatra)
-- Sinatra modular apps: [sinatra-modular](../../tree/sinatra-modular)
-- Padrino: [padrino](../../tree/padrino)
-- Grape: [grape](../../tree/grape)
-- Capistrano + dotenv: [capistrano+dotenv](../../tree/capistrano+dotenv)
-- Capistrano + Figaro: [capistrano+figaro](../../tree/capistrano+figaro)
-- Shoryuken: [shoryuken](../../tree/shoryuken)
-
-## Elixir example apps
-
-Currently the Elixir apps are not added to this repository, we have plans to do
-so at a later time. For now you can refer to these repositories for Elixir
-example apps:
-
-- [AppSignal Elixir example](https://github.com/jeffkreeftmeijer/appsignal-elixir-example)
-- [AppSignal Plug example](https://github.com/jeffkreeftmeijer/appsignal-plug-example)
-- [AppSignal Phoenix example](https://github.com/jeffkreeftmeijer/appsignal-phoenix-example)
-- [AppSignal Phoenix chat example](https://github.com/jeffkreeftmeijer/appsignal-phoenix-chat-example)
-
-Each repository may have multiple branches with different scenarios and
-configuration.
-
-## Node.js example apps
-
-Each example lives in its own branch.
-
-- Express.js v4: [express](../../tree/express)
-
-## Setup
-
-1. Create an application on [AppSignal.com][appsignal-website].
-2. Follow the installation procedure and get a "push API key".
-3. Set the push API key in your terminal session, or prefix per example app.
+Clone this repo and npm install.
 
 ```bash
-export APPSIGNAL_PUSH_API_KEY=YOUR-KEY
-# or
-APPSIGNAL_PUSH_API_KEY=YOUR-KEY bundle exec some command
+npm i
 ```
 
 ## Usage
 
-1. Checkout the branch you need as listed in [Examples](#ruby-example-apps).
-2. Read the README for that example application.
+### Development server
 
-### Minimal setup per app
+```bash
+npm start
+```
 
-These example applications contain the least required amount of code as
-possible to focus on the AppSignal integration. Use the code in the example to
-modify your own application.
+You can view the development server at `localhost:8080`.
 
-## Contributing
+### Production build
 
-If you want to contribute an application to our examples repository (thank
-you!), please follow these steps:
+```bash
+npm run build
+```
 
-1. Fork this repository.
-2. Create a new branch with the application name.
-   `git checkout --orphan branch-name`
-   Use `+` to combine gems and `-` to indicate variations on other examples.
-3. Add an example application.
-4. Document the example application's along with its usage in the README.
-5. Commit it with `Add [test app name] example`.
-6. Install AppSignal in the application.
-7. Commit it with `Install AppSignal`.
-8. Send in an issue.
-   Since PRs can only be merged in another branch, please send in issues
-   pointing to your fork and we will include them manually.
+> Note: Install [http-server](https://www.npmjs.com/package/http-server) globally to deploy a simple server.
 
-Also see our [Contributing guide][contributing-guide] for more information.
+```bash
+npm i -g http-server
+```
 
-[appsignal]: https://appsignal.com
-[contact]: mailto:support@appsignal.com
-[docs]: https://docs.appsignal.com
-[contributing-guide]: https://docs.appsignal.com/contributing
+You can view the deploy by creating a server in `dist`.
+
+```bash
+cd dist && http-server
+```
+
+## Features
+
+- [webpack](https://webpack.js.org/)
+- [Babel](https://babeljs.io/)
+- [Sass](https://sass-lang.com/)
+- [PostCSS](https://postcss.org/)
+
+## Dependencies
+
+### webpack
+
+- [`webpack`](https://github.com/webpack/webpack) - Module and asset bundler.
+- [`webpack-cli`](https://github.com/webpack/webpack-cli) - Command line interface for webpack
+- [`webpack-dev-server`](https://github.com/webpack/webpack-dev-server) - Development server for webpack
+- [`webpack-merge`](https://github.com/survivejs/webpack-merge) - Simplify development/production configuration
+- [`cross-env`](https://github.com/kentcdodds/cross-env) - Cross platform configuration
+
+### Babel
+
+- [`@babel/core`](https://www.npmjs.com/package/@babel/core) - Transpile ES6+ to backwards compatible JavaScript
+- [`@babel/plugin-proposal-class-properties`](https://babeljs.io/docs/en/babel-plugin-proposal-class-properties) - Use properties directly on a class (an example Babel config)
+- [`@babel/preset-env`](https://babeljs.io/docs/en/babel-preset-env) - Smart defaults for Babel
+
+### Loaders
+
+- [`babel-loader`](https://webpack.js.org/loaders/babel-loader/) - Transpile files with Babel and webpack
+- [`sass-loader`](https://webpack.js.org/loaders/sass-loader/) - Load SCSS and compile to CSS
+  - [`node-sass`](https://github.com/sass/node-sass) - Node Sass
+- [`postcss-loader`](https://webpack.js.org/loaders/postcss-loader/) - Process CSS with PostCSS
+  - [`postcss-preset-env`](https://www.npmjs.com/package/postcss-preset-env) - Sensible defaults for PostCSS
+- [`css-loader`](https://webpack.js.org/loaders/css-loader/) - Resolve CSS imports
+- [`style-loader`](https://webpack.js.org/loaders/style-loader/) - Inject CSS into the DOM
+
+### Plugins
+
+- [`clean-webpack-plugin`](https://github.com/johnagan/clean-webpack-plugin) - Remove/clean build folders
+- [`copy-webpack-plugin`](https://github.com/webpack-contrib/copy-webpack-plugin) - Copy files to build directory
+- [`html-webpack-plugin`](https://github.com/jantimon/html-webpack-plugin) - Generate HTML files from template
+- [`mini-css-extract-plugin`](https://github.com/webpack-contrib/mini-css-extract-plugin) - Extract CSS into separate files
+- [`css-minimizer-webpack-plugin`](https://webpack.js.org/plugins/css-minimizer-webpack-plugin/) - Optimize and minimize CSS assets
+
+## Author
+
+- [Tania Rascia](https://www.taniarascia.com)
+
+## License
+
+This project is open source and available under the [MIT License](LICENSE).
