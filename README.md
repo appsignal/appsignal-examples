@@ -71,7 +71,7 @@ The examples can always be started using the `npm start`/`yarn start` commands. 
 
 ## Setup
 
-1. Create an application on [AppSignal.com][appsignal-website].
+1. Create an application on [appsignal-website](https://AppSignal.com).
 2. Follow the installation procedure and get a "push API key".
 3. Set the push API key in your terminal session, or prefix per example app.
 
