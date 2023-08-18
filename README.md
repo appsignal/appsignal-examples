@@ -1,5 +1,9 @@
 # AppSignal examples
 
+> ⚠️ This repo is no longer maintained. For a more up-to-date list of app, see
+> the [appsignal/test-setups](https://github.com/appsignal/test-setups)
+> repository.
+
 This repository contains a collection of example applications and integrations
 that work with [AppSignal][appsignal]. This list of applications is not
 the complete list of frameworks and libraries integrates with, please see our
